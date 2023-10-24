@@ -1,0 +1,155 @@
+:root{
+--index: calc(1vw + 1vh);
+--color-text:#6f95ad;
+--galery-gap: calc(var(--index) * 10);
+}
+
+
+body {
+  background: black !important;
+ }
+
+.octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.logotype{
+  height: 38px;
+  width: 38px;
+}
+.overlap-cover {
+  width: 1000px;
+  height: 400px;
+  margin-top: 90px;
+  border-radius: 100px;
+  background-image: url(./img/5528701.jpg);
+  color: #6f95ad;
+}
+p{
+  margin-bottom: 50px !important;
+}
+.start-content{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-size: 44px;
+}
+.pd-1{
+ padding-top: 20px;
+}
+
+.butLog {
+  gap: 14px;
+  padding: 15px 25px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 17px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 17px;
+  margin-right: 10px;
+}
+.butReg {
+  gap: 14px;
+  padding: 15px 25px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 17px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 17px;
+}
+  .btn-1 {
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: opacity .15s ease;
+}
+
+.btn-1:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  }
+
+  .start-learn{
+    margin-top: 500px;
+  }
+  .overlap-learn{
+    background-image: url("img/image-11.png");
+  /* задает стартовое положение изображения на странице */
+  background-position: center center;
+  /* определяет размер изображения на странице */
+  
+  /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+  background-repeat: no-repeat;
+  /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+  вместе с остальной частью страницы или будет фиксированным */
+  
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 20.5em;
+    height: 3.9em;
+    border: #3654ff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 5.5em;
+  }
+
+  .about-learn{
+    margin-top: 500px;
+  }
+
+  .portfolio{
+    color:#3654ff;
+    font-size: 35px;
+  }
+
+  .gallery{
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+  }
+
+  .gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .gallery__item {
+    max-width: calc(var(--index) * 18);
+    margin-bottom: var(--galery-gap);
+    max-height:100vh;
+  }

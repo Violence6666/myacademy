@@ -1,0 +1,36 @@
+body{
+  background-color: black !important;
+}
+.logotype{
+  height: 38px;
+  width: 38px;
+}
+.octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.mt-3 {
+  margin-top: 16px !important;
+}
+.width-full {
+  width: 100% !important;
+}
+.d-md-flex {
+  display: flex !important;
+}
+.py-3 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.font-mktg {
+  font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  word-break: keep-all;
+}
+.card-content{
+  background-color: rgb(0, 0, 202) !important;
+  color: white;
+  max-width: 150px;
+  max-height: 450px;
+}
