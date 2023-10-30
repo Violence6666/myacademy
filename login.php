@@ -1,110 +1,97 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title></title>	
-		<link rel="stylesheet" href="loginstyle.css" type="text/css">
-		<style type="text/css">
-      <?php 
-      include "styleNe.css" 
-      ?>
-  </style>
+		<title>Авторизация</title>	
+		<link rel="stylesheet" href="globalsLog.css">
+		<link rel="stylesheet" href="styleguideLog.css">
+		<link rel="stylesheet" href="loginstyle.css">
 	</head>
-	<body>		
-<div id="wrapper">
-<nav>
-	<ul class="top-menu">	
-	<li class="active"><a href="login.php">Авторизация</a></li>
-	<li><a href="complex_form.php">Регистрация</a></li>		
-	<li><a href=""></a></li>
-				<li><a href=""></a></li>
-				<li><a href=""></a></li>
-			</ul>
-		</nav>
-<div id="heading">
-	<h1>Вход</h1>
+	<body class="logged-out env-production page-responsive session-authentication intent-mouse">
+	<!-- <div class="logining">
+	<div class="logining-wrapper"> -->
+	<div class="header-wrapper">
+		<div class="header-logged pt-5 pb-4">
+			<div class="cointainer-center">
+			<a class="header-logo" href="index.html">
+			<img class="logotype" src="img/logo.svg">
+			</a>
+			</div>
+		</div>
+	</div>
+<div class="application-main">
+    <main>
+			<div class="auth-form px-3">
+							<div class="auth-form-header p-0">
+								<h1>Войти в МоюАкадемию</h1>
+							</div>
+							<div class="auth-form-body mt-3">
+								<form action="login.php" method="post" name="l_form" >
+										  
+										   <tr>
+										    <label class="login-label" for="login-field">Логин</label>
+										    <td > <input type="text" name="l_login" class="form-control input-block"> </td>
+										   </tr>
+											<tr>
+										    <label for="password">Пароль</label>
+										    <td> <input type="text" name="l_password" class="form-control form-control input-block js-password-field" required=" " /> </td>
+										   </tr>
+
+										   <tr>
+										    <td colspan="2"> <input type="submit" name="l_send" value="Войти" class="btn btn-primary btn-block js-sign-in-button"> </td>
+										   </tr>
+
+										 
+								</form>
+										<?php
+										require_once("dbconnect.php");
+										if(isset($_POST["l_login"])){ $l_login = $_POST["l_login"]; }
+										if(isset($_POST["l_password"])){ $l_password = $_POST["l_password"]; }
+										if(isset($_POST["l_send"])){ $l_send = $_POST["l_send"]; }
+
+										if(isset($l_send)){
+										$result = mysqli_query($connect, "SELECT * FROM users WHERE login = '$l_login' AND password = '$l_password'") or die ( "Error : ".mysqli_error() ); 
+
+
+
+										if(mysqli_num_rows($result)<1)
+										{echo"Неправильный логин или пароль";}
+										}
+										?>
+									
+							</div>
+							
+							<div class="login-callout mt-3">
+													<webauthn-subtle class="js-webauthn-subtle" hidden="" data-catalyst="">
+															<p class="mb-1 mt-0 js-webauthn-subtle-emu-control">
+															<button data-action="click:webauthn-subtle#prompt" type="button" data-view-component="true" class="Button--link Button--medium Button">    <span class="Button-content">
+																</span>
+															</button>  
+															</p>
+													</webauthn-subtle>
+													<p class="m-0 p-0">
+														Новичок?
+														<a data-ga-click="Sign in, switch to sign up" class="new-acc" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;sign in switch to sign up&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/login&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="72d062e79bb6ab076a3b88b32943286ea51894183bd812a5038d00013946f239" href="reg.php">Создать аккаунт</a>
+													</p>
+							</div>
+							
+			</div>
+	</main>
+			
+
 </div>
-	<center>
-	<form action="login.php" method="post" name="l_form" >
-  <table>
-   <tr>
-    <td> Логин: </td>
-    <td> <input type="text" name="l_login" required=" " /> </td>
-   </tr>
-	<tr>
-    <td> Пароль: </td>
-    <td> <input type="text" name="l_password" required=" " /> </td>
-   </tr>
-
-   <tr>
-    <td colspan="2"> <input type="submit" name="l_send" value="Войти" /> </td>
-   </tr>
-
-
-  </table>
-<?php
-require_once("dbconnect.php");
-if(isset($_POST["l_login"])){ $l_login = $_POST["l_login"]; }
-if(isset($_POST["l_password"])){ $l_password = $_POST["l_password"]; }
-if(isset($_POST["l_send"])){ $l_send = $_POST["l_send"]; }
-
-if(isset($l_send)){
-$result = mysqli_query($connect, "SELECT * FROM users WHERE login = '$l_login' AND password = '$l_password'") or die ( "Error : ".mysqli_error() ); 
-
-
-
-if(mysqli_num_rows($result)<1)
-{echo"Неправильный логин или пароль";}
-else{
-$_SESSION['login'] = $l_login;
-$_SESSION['password'] = $l_password;
-//$_SESSION['name'] = $l_name;
-//echo "Авторизация прошла успешно! ";}
-
-echo "Авторизация прошла успешно! Здравствуйте, ";}
-//Печатаем содержимое таблицы
-while ($a=mysqli_fetch_array($result))
-{
-$name=$a['name'];
-echo $name;echo"<br>";echo"<form action='index.php' method='post'>
-                        <input type='text' name='name' value='" . $a['name'] . "' />
-						<a href='index.php?name=$name'>начать</a>
-	
-                   </form>";echo"<br>";
-}
-
-/*
-
-//Печатаем шапку таблицы
-echo ("<p align=center><font face=verdana><b>Найденные</b>
-<table border=1 align=center width=90% cellpadding=5>
-<tr bgcolor=#ffffcc>
-<td>Имя</td>
-<td>Пароль</td>
-</tr>");
-
-//Печатаем содержимое таблицы
-while ($a=mysqli_fetch_array($result))
-{
-$name=$a['name'];
-$password=$a['password'];
-echo ("<tr>
-<td>$name</td>
-<td>$password</td>
-</tr>");
-}
-echo ("</table>");*/
-}
-
-?>
 
 
 
 
-</form>
-</center>
+
+
+<!-- </div> 
+</div> -->
 </body>
+
+
 </html>

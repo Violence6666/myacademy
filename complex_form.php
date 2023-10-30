@@ -108,7 +108,7 @@
 			if(isset($_POST["r_send"])){ $r_send = $_POST["r_send"]; }	
 			if(isset($r_send)){
 mysqli_query($connect,"SET NAMES UTF8");
-			$result = mysqli_query($connect,"INSERT INTO student (nameSurname, email, login, password) VALUES ('$r_nameSurname', '$r_email', '$r_login', '$r_password')") or die ("Error : " .mysqli_error() );
+			$result = mysqli_query($connect,"INSERT INTO users (nameSurname, email, login, password) VALUES ('$r_nameSurname', '$r_email', '$r_login', '$r_password')") or die ("Error : " .mysqli_error() );
 
 
 			if($result)	

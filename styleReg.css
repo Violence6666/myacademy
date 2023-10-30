@@ -1,3 +1,29 @@
+.z-2 {
+  z-index: 2 !important;
+}
+
+.f4 {
+  font-size: var(--h4-size, 16px) !important;
+}
+
+.py-3 {
+  padding-top: var(--base-size-16, 16px) !important;
+  padding-bottom: var(--base-size-16, 16px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 element.style {
   word-wrap: break-word;
 }
