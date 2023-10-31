@@ -235,10 +235,8 @@
      </script>
 	</head>
 
-	<body>
-   
-
-<div data-turbo-body class="logged-out env-production page-responsive height-full d-flex flex-column header-overlay" style="word-wrap: break-word;">
+<body>
+	<div data-turbo-body class="logged-out env-production page-responsive height-full d-flex flex-column header-overlay" style="word-wrap: break-word;">
             <div class="position-relative js-header-wrapper ">
                     <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
                         <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
@@ -267,7 +265,7 @@
                 </div>
 
 
-        <div class="application-main d-flex flex-auto flex-column" data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="">
+				<div class="application-main d-flex flex-auto flex-column" data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="">
                     <div class="js-signup-warp-bg signup-warp-bg position-absolute" role="img" aria-describedby="video-desc" hidden=""></div>
                     <div id="video-desc" aria-live="polite" class="sr-only" style="display: none;"><p>Launch code accepted. Helm, Warp One. Engage! We are initializing your dashboard and will redirect you there momentarily.</p></div>
                   
@@ -293,65 +291,64 @@
                         <div id="email-container" class="js-continue-step-container signup-continue-step-container mt-4" data-step-state="active">
 						<form action="complex_form.php" method="post" name="myForm" onsubmit = "return(validate());">
             <table align="center" cellspacing = "3" cellpadding = "3" border = "3">
-<tr>
-<label>Фамилия и имя</label>
-<td> <input type="text" name="r_nameSurname"/> </td>
-</tr>
- <tr>
-              <td align = "right">E-mail</td>
-              <td><input type = "text" name = "email"/></td>
-           </tr>
-           
-<tr>
-<td align = "right"> Логин: </td>
-<td> <input type="text" name="r_login"/> </td>
-</tr>
-<tr>
-<td align = "right"> Пароль: </td>
-<td> <input type="password" name="r_password"/> </td>
-</tr>
-</table>
-   <p id="demo" style="color:red; text-align:center"></p><div style="text-align:center"><input type="submit" name="r_send" value="Создать аккаунт" /></div>      
-<?php
- require_once("dbconnect.php");
+		<tr>
+		<label>Фамилия и имя</label>
+		<td> <input type="text" name="r_nameSurname"/> </td>
+		</tr>
+		 <tr>
+				  <td align = "right">E-mail</td>
+				  <td><input type = "text" name = "email"/></td>
+			   </tr>
+			   
+		<tr>
+		<td align = "right"> Логин: </td>
+		<td> <input type="text" name="r_login"/> </td>
+		</tr>
+		<tr>
+		<td align = "right"> Пароль: </td>
+		<td> <input type="password" name="r_password"/> </td>
+		</tr>
+		</table>  
+		<?php
+		 require_once("dbconnect.php");
  
 
-//оператор выполнения приложения if
-			if(isset($_POST["r_nameSurname"])){ $r_nameSurname = $_POST["r_nameSurname"]; }
-			if(isset($_POST["email"])){ $r_email = $_POST["email"]; }
-			if(isset($_POST["r_login"])){ $r_login = $_POST["r_login"]; }			
-			if(isset($_POST["r_password"])){ $r_password = $_POST["r_password"]; }		
-			if(isset($_POST["r_send"])){ $r_send = $_POST["r_send"]; }	
-			if(isset($r_send)){
-mysqli_query($connect,"SET NAMES UTF8");
-			$result = mysqli_query($connect,"INSERT INTO users (nameSurname, email, login, password) VALUES ('$r_nameSurname', '$r_email', '$r_login', '$r_password')") or die ("Error : " .mysqli_error() );
+		//оператор выполнения приложения if
+				if(isset($_POST["r_nameSurname"])){ $r_nameSurname = $_POST["r_nameSurname"]; }
+				if(isset($_POST["email"])){ $r_email = $_POST["email"]; }
+				if(isset($_POST["r_login"])){ $r_login = $_POST["r_login"]; }			
+				if(isset($_POST["r_password"])){ $r_password = $_POST["r_password"]; }		
+				if(isset($_POST["r_send"])){ $r_send = $_POST["r_send"]; }	
+				if(isset($r_send)){
+		mysqli_query($connect,"SET NAMES UTF8");
+				$result = mysqli_query($connect,"INSERT INTO users (nameSurname, email, login, password) VALUES ('$r_nameSurname', '$r_email', '$r_login', '$r_password')") or die ("Error : " .mysqli_error() );
 
 
-			if($result)	
-				{
-echo"Регистрация прошла успешно!";
-exit();
+				if($result)	
+					{
+		echo"Регистрация прошла успешно!";
+		exit();
+					}
+				}else{
+				echo"нет данных для обработки";	
 				}
-			}else{
-			echo"нет данных для обработки";	
-			}
-			?>	
+				?>	
 
 
 
 
-</form>
+		</form>
+		<form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/signup" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="Vi9HxEMuFZA8ivb8V+6vS//MX9ONFJ7invxcR3WD8MznLxvOxDUfMEvP89fyqQoDFYt3U0yfyMXltWLWTpTeNQ==">
                           <div>
-
                             <label for="email" class="text-mono signup-text-prompt">
-                              Введите электронную почту<sup aria-hidden="true">*</sup>
+                              Введите электронную почту
                             </label>
                           </div>
                           <div class="d-flex flex-items-center flex-column flex-sm-row">
                             <div class="d-flex flex-items-center width-full">
                               <span class="signup-continue-prompt mr-2" aria-hidden="true">
                               </span>
-                                <input id="email" class="js-continue-input js-continue-focus-target signup-input form-control input-block flex-1 border-0 rounded-0 p-0 box-shadow-none color-text-white f4 text-mono" required="" autofocus="autofocus" autocomplete="off" data-target="text-suggester.input" aria-describedby="email-err" type="email" name="user[email]" spellcheck="false">
+                                <td><input type = "text" name = "email"/></td>
                                 <input type="hidden" data-csrf="true" value="6qVzpQmLrjtWXmJzeFdRWCkklZ0KCayHsVihExdq+QuO0+QLXUd8ZkrvvU/tXlFMX1EhVcRIufcEV6Jg8jgAfA==">
                               
                             </div>
@@ -396,6 +393,8 @@ exit();
                               Введите псевдоним<sup aria-hidden="true">*</sup>
                             </label>
                           </div>
+						  
+						  
                           <div class="d-flex flex-items-center flex-column flex-sm-row">
                             <div class="d-flex flex-items-center width-full">
                               <span class="signup-continue-prompt mr-2" aria-hidden="true">
@@ -410,22 +409,15 @@ exit();
                             </button>
                             
                           </div>
-                          <button name="button" type="submit" class="pd-total form-control signup-submit-button width-full py-2 js-octocaptcha-form-submit" data-optimizely-event="click.signup_continue.create_account" data-disable-invalid="true">Создать аккаунт</button>
-                  </form>  
+                          <p id="demo" style="color:red; text-align:center"></p><div style="text-align:center"><input type="submit" name="r_send" value="Создать аккаунт" /></div>    
+        </form>  
               </div>
                    
                   </text-suggester>
                   
                       </div>
-                      <img src="https://github.githubassets.com/images/modules/site/home/hero-glow.svg" alt="Glowing universe" class="js-warp-hide position-absolute overflow-hidden home-hero-glow events-none">
                     </main>     
-        </div>  
-		
-<div id="wrapper">
-		<center>
-		
-
-				
-		</center>
-	</body>
+		</div>  
+	</div>
+</body>
 </html>
