@@ -290,26 +290,105 @@
                         <input type="hidden" name="return_to" id="return_to" autocomplete="off" class="form-control">
                         <div id="email-container" class="js-continue-step-container signup-continue-step-container mt-4" data-step-state="active">
 						<form action="complex_form.php" method="post" name="myForm" onsubmit = "return(validate());">
-            <table align="center" cellspacing = "3" cellpadding = "3" border = "3">
-		<tr>
-		<label>Фамилия и имя</label>
-		<td> <input type="text" name="r_nameSurname"/> </td>
-		</tr>
-		 <tr>
-				  <td align = "right">E-mail</td>
-				  <td><input type = "text" name = "email"/></td>
-			   </tr>
-			   
-		<tr>
-		<td align = "right"> Логин: </td>
-		<td> <input type="text" name="r_login"/> </td>
-		</tr>
-		<tr>
-		<td align = "right"> Пароль: </td>
-		<td> <input type="password" name="r_password"/> </td>
-		</tr>
-		</table>  
-		<?php
+              
+		</form>
+		<form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/signup" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="Vi9HxEMuFZA8ivb8V+6vS//MX9ONFJ7invxcR3WD8MznLxvOxDUfMEvP89fyqQoDFYt3U0yfyMXltWLWTpTeNQ==">
+                          
+						  <div class="mt-4">
+                            <label for="nameSurname" class="text-mono signup-text-prompt">
+                              Введите Имя и фамилию<sup aria-hidden="true">*</sup>
+                            </label>
+                          </div>
+						  
+						  
+                          <div class="d-flex flex-items-center flex-column flex-sm-row">
+								<div class="d-flex flex-items-center width-full">
+								  <span class="signup-continue-prompt mr-2" aria-hidden="true">
+								  </span>
+					
+									<td> <input type="text" name="r_nameSurname"/> </td>
+									
+								 
+								</div>
+						  
+						  
+						  
+						</div>
+						  <div>
+                            <label for="email" class="text-mono signup-text-prompt">
+                              Введите электронную почту
+                            </label>
+                          </div>
+                          <div class="d-flex flex-items-center flex-column flex-sm-row">
+                            <div class="d-flex flex-items-center width-full">
+                              <span class="signup-continue-prompt mr-2" aria-hidden="true">
+                              </span>
+                                <td><input type = "text" name = "email"/></td>
+                                <input type="hidden" data-csrf="true" value="6qVzpQmLrjtWXmJzeFdRWCkklZ0KCayHsVihExdq+QuO0+QLXUd8ZkrvvU/tXlFMX1EhVcRIufcEV6Jg8jgAfA==">
+                              
+                            </div>
+                          </div>
+                        
+                  
+				  
+				  
+				  
+				  
+				  
+                       
+                          <div class="mt-4">
+                            <label for="password" class="text-mono signup-text-prompt">
+                              Придумайте пароль<sup aria-hidden="true">*</sup>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-items-center flex-column flex-sm-row">
+                                          <div class="d-flex flex-items-center width-full">
+                                            <span class="signup-continue-prompt mr-2" aria-hidden="true"></span>
+                                            <visible-password class="flex-1 d-flex flex-items-center mr-3" data-catalyst="">
+                                              
+                                                <td> <input type="password" name="r_password"/> </td>
+                                                <input type="hidden" data-csrf="true" value="SEh8eyqZASP06O7lv+t9HQnlsJrO94tyOqSSkV9n+1Pq39rHwIKdZw6wOgAwJrH5wVGnEq7h9mCzVZL8dw/LsQ==">
+                                            
+                                                <button data-target="visible-password.showButton" data-action="click:visible-password#show" aria-label="Show password" type="button" data-view-component="true" class="signup-password-visibility-toggle Button--link Button--medium Button">    <span class="Button-content">
+                                                    <span class="Button-label">
+                                                      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-eye">
+                                                      <path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"></path>
+                                                    </svg>
+                                                  </span>
+                                                  </span>
+                                              </button>  
+                                
+                                                    
+                                  </visible-password>
+                                </div>
+                                
+                          </div>
+                     
+                  
+                        
+                          <div class="mt-4">
+                            <label for="login" class="text-mono signup-text-prompt">
+                              Введите псевдоним<sup aria-hidden="true">*</sup>
+                            </label>
+                          </div>
+						  
+						  
+                          <div class="d-flex flex-items-center flex-column flex-sm-row">
+                            <div class="d-flex flex-items-center width-full">
+                              <span class="signup-continue-prompt mr-2" aria-hidden="true">
+                              </span>
+                
+                                <td> <input type="text" name="r_login"/> </td>
+                                <input type="hidden" data-csrf="true" value="oxH31WjSW47A9U+LYjjZF+Z8COwuceZ82sCngKioU6mjuqDvh5rEpBbxkNcWNDr0IeQW9w730ci0KvZeWx8Gdw==">
+                             
+                            </div>
+                            
+                            
+                          </div>
+                          <p id="demo" style="color:red; text-align:center"></p><div style="text-align:center"><input type="submit" name="r_send" value="Создать аккаунт" /></div>
+						  
+        </form>
+<?php
 		 require_once("dbconnect.php");
  
 
@@ -332,85 +411,7 @@
 				}else{
 				echo"нет данных для обработки";	
 				}
-				?>	
-
-
-
-
-		</form>
-		<form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/signup" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="Vi9HxEMuFZA8ivb8V+6vS//MX9ONFJ7invxcR3WD8MznLxvOxDUfMEvP89fyqQoDFYt3U0yfyMXltWLWTpTeNQ==">
-                          <div>
-                            <label for="email" class="text-mono signup-text-prompt">
-                              Введите электронную почту
-                            </label>
-                          </div>
-                          <div class="d-flex flex-items-center flex-column flex-sm-row">
-                            <div class="d-flex flex-items-center width-full">
-                              <span class="signup-continue-prompt mr-2" aria-hidden="true">
-                              </span>
-                                <td><input type = "text" name = "email"/></td>
-                                <input type="hidden" data-csrf="true" value="6qVzpQmLrjtWXmJzeFdRWCkklZ0KCayHsVihExdq+QuO0+QLXUd8ZkrvvU/tXlFMX1EhVcRIufcEV6Jg8jgAfA==">
-                              
-                            </div>
-                          </div>
-                        </div>
-                  
-                       
-                          <div class="mt-4">
-                            <label for="password" class="text-mono signup-text-prompt">
-                              Придумайте пароль<sup aria-hidden="true">*</sup>
-                            </label>
-                          </div>
-                          <div class="d-flex flex-items-center flex-column flex-sm-row">
-                                          <div class="d-flex flex-items-center width-full">
-                                            <span class="signup-continue-prompt mr-2" aria-hidden="true"></span>
-                                            <visible-password class="flex-1 d-flex flex-items-center mr-3" data-catalyst="">
-                                              
-                                                <input id="password" class="form-control js-continue-input js-continue-focus-target signup-input form-control input-block flex-1 border-0 rounded-0 p-0 box-shadow-none color-text-white f4 text-mono" required="" passwordrules="minlength: 15; allowed: unicode;" autocomplete="off" data-target="visible-password.input" aria-describedby="password-err" type="password" name="user[password]" spellcheck="false">
-                                                <input type="hidden" data-csrf="true" value="SEh8eyqZASP06O7lv+t9HQnlsJrO94tyOqSSkV9n+1Pq39rHwIKdZw6wOgAwJrH5wVGnEq7h9mCzVZL8dw/LsQ==">
-                                            
-                                                <button data-target="visible-password.showButton" data-action="click:visible-password#show" aria-label="Show password" type="button" data-view-component="true" class="signup-password-visibility-toggle Button--link Button--medium Button">    <span class="Button-content">
-                                                    <span class="Button-label">
-                                                      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-eye">
-                                                      <path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"></path>
-                                                    </svg>
-                                                  </span>
-                                                  </span>
-                                              </button>  
-                                
-                                                    
-                                  </visible-password>
-                                </div>
-                                <button type="button" class="js-continue-button signup-continue-button form-control px-3 width-full width-sm-auto mt-4 mt-sm-0">
-                                  Continue
-                                </button>
-                          </div>
-                     
-                  
-                        
-                          <div class="mt-4">
-                            <label for="login" class="text-mono signup-text-prompt">
-                              Введите псевдоним<sup aria-hidden="true">*</sup>
-                            </label>
-                          </div>
-						  
-						  
-                          <div class="d-flex flex-items-center flex-column flex-sm-row">
-                            <div class="d-flex flex-items-center width-full">
-                              <span class="signup-continue-prompt mr-2" aria-hidden="true">
-                              </span>
-                
-                                <input id="login" class="form-control js-continue-input js-continue-focus-target signup-input form-control input-block flex-1 border-0 rounded-0 p-0 box-shadow-none color-text-white f4 text-mono" required="" autocomplete="off" aria-describedby="login-err" type="text" name="user[login]" spellcheck="false">
-                                <input type="hidden" data-csrf="true" value="oxH31WjSW47A9U+LYjjZF+Z8COwuceZ82sCngKioU6mjuqDvh5rEpBbxkNcWNDr0IeQW9w730ci0KvZeWx8Gdw==">
-                             
-                            </div>
-                            <button type="button" class="js-continue-button signup-continue-button form-control px-3 width-full width-sm-auto mt-4 mt-sm-0" data-continue-to="opt-in-container" data-optimizely-event="click.signup_continue.username">
-                              Continue
-                            </button>
-                            
-                          </div>
-                          <p id="demo" style="color:red; text-align:center"></p><div style="text-align:center"><input type="submit" name="r_send" value="Создать аккаунт" /></div>    
-        </form>  
+				?>			
               </div>
                    
                   </text-suggester>
