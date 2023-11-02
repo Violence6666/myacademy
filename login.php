@@ -8,7 +8,7 @@
 		<title>Авторизация</title>	
 		<link rel="stylesheet" href="globalsLog.css">
 		<link rel="stylesheet" href="styleguideLog.css">
-		<link rel="stylesheet" href="loginstyle.css">
+		<link rel="stylesheet" href="styles/loginstyle.css">
 	</head>
 	<body class="logged-out env-production page-responsive session-authentication intent-mouse">
 	<!-- <div class="logining">
@@ -47,7 +47,7 @@
 										 
 								</form>
 										<?php
-										require_once("dbconnect.php");
+										require_once("scripts/dbconnect.php");
 										if(isset($_POST["l_login"])){ $l_login = $_POST["l_login"]; }
 										if(isset($_POST["l_password"])){ $l_password = $_POST["l_password"]; }
 										if(isset($_POST["l_send"])){ $l_send = $_POST["l_send"]; }
