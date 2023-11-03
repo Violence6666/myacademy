@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    session_start();
+    if ($_SESSION['user']) {
+        header('Location: profile.php');
+    }
+?>
+
+<!doctype html>
 <html>
 <head>
   <style type="text/css">
@@ -311,38 +318,6 @@
     <?php include "styleNe.css"
     ?>
   </style>
-  <script type="text/javascript">
-    function validate() {
-      var text;
-      if (document.myForm.nameSurname.value == "") {
-        text = "Введите ";
-        document.getElementById("demo").innerHTML = text;
-        document.myForm.nameSurname.focus();
-        return false;
-      }
-      if (document.myForm.email.value == "") {
-        text = "E-mail cannot be empty";
-        document.getElementById("demo").innerHTML = text;
-        document.myForm.email.focus();
-        return false;
-      }
-      var emailID = document.myForm.email.value;
-      atposn = emailID.indexOf("@");
-      dotposn = emailID.lastIndexOf(".");
-      if (atposn < 1 || (dotposn - atposn < 2)) {
-        text = "Please enter valid email ID";
-        document.getElementById("demo").innerHTML = text;
-        document.myForm.email.focus();
-        return false;
-      }
-      if (document.myForm.subject.value == "0") {
-        text = "Please provide your area of expertise";
-        document.getElementById("demo").innerHTML = text;
-        return false;
-      }
-      return (true);
-    }
-  </script>
 </head>
 
 <body>
@@ -389,29 +364,19 @@
                 data-lines="[&quot;Добро пожаловать в МоюАкадемию!&quot;, &quot;Давайте начнем приключение&quot;]"
                 data-continue-to="email-container" class="js-signup-typed-welcome">
                 <span data-target="typing-effect.content" class="text-mono text-gray-light-mktg">
-
-
-
                 </span>
                 <span data-target="typing-effect.cursor" class="typing-effect-cursor" hidden="">|</span>
               </typing-effect>
-
-
-
-              <!-- '"` -->
-              <!-- </textarea></xmp> -->
               <form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/reg.php"
                 accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token">
                 <input type="hidden" name="return_to" id="return_to" autocomplete="off" class="form-control">
                 <div id="email-container" class="js-continue-step-container signup-continue-step-container mt-4"
                   data-step-state="active">
                   <form action="complex_form.php" method="post" name="myForm" onsubmit="return(validate());">
-
                   </form>
-                  <form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/myacademy/reg.php"
+            <form class="position-relative js-octocaptcha-parent" data-turbo="false" action="/myacademy/reg.php"
                     accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true"
                       name="authenticity_token">
-
                     <div class="mt-4">
                       <label for="nameSurname" class="text-mono signup-text-prompt">
                         Введите Имя и фамилию<sup aria-hidden="true">*</sup>
@@ -455,52 +420,27 @@
                         Введите логин<sup aria-hidden="true">*</sup>
                       </label>
                     </div>
-
-
                     <div class="d-flex flex-items-center flex-column flex-sm-row">
                       <div class="d-flex flex-items-center width-full">
                         <span class="signup-continue-prompt mr-2" aria-hidden="true">
                         </span>
-
                         <td> <input type="text" name="r_login" class="textInput" /> </td>
-
                       </div>
-
-
                     </div>
                     <p id="demo" style="color:red; text-align:center"></p>
                     <div style="text-align:center"><input type="submit" name="r_send"
                         class="pd-total form-control signup-submit-button width-full py-2 js-octocaptcha-form-submit"
-                        value="Создать аккаунт" /></div>
-
-
-                    <?php
-		 require_once("scripts/dbconnect.php");
-		//оператор выполнения приложения if
-				if(isset($_POST["r_nameSurname"])){ $r_nameSurname = $_POST["r_nameSurname"]; }
-				if(isset($_POST["email"])){ $r_email = $_POST["email"]; }
-				if(isset($_POST["r_login"])){ $r_login = $_POST["r_login"]; }			
-				if(isset($_POST["r_password"])){ $r_password = $_POST["r_password"]; }		
-				if(isset($_POST["r_send"])){ $r_send = $_POST["r_send"]; }	
-				if(isset($r_send)){
-		mysqli_query($connect,"SET NAMES UTF8");
-				$result = mysqli_query($connect,"INSERT INTO users (nameSurname, email, login, password) VALUES ('$r_nameSurname', '$r_email', '$r_login', '$r_password')") or die ("Error : " .mysqli_error() );
-
-
-				if($result)	
-					{
-		echo"Регистрация прошла успешно!";
-		exit();
-					}
-				}else{
-				echo"нет данных для обработки";	
-				}
-				?>
-                  </form>
-                </div>
-
+                        value="Создать аккаунт" />
+					</div>
+					<?php
+						if ($_SESSION['message']) {
+							echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+						}
+						unset($_SESSION['message']);
+					?>
+            </form>
+               </div>
           </text-suggester>
-
         </div>
       </main>
     </div>
