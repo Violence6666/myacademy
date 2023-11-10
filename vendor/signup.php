@@ -1,32 +1,33 @@
 <?php
 
     session_start();
-    require_once 'scripts/dbconnect.php';
+    require_once 'connect.php';
 
-    $r_nameSurname = $_POST['r_nameSurname'];
-    $r_login = $_POST['r_login'];
+    $full_name = $_POST['full_name'];
+    $login = $_POST['login'];
     $email = $_POST['email'];
-    $r_password = $_POST['r_password'];
+    $password = $_POST['password'];
+    $password_confirm = $_POST['password_confirm'];
 
     if ($password === $password_confirm) {
 
         $path = 'uploads/' . time() . $_FILES['avatar']['name'];
         if (!move_uploaded_file($_FILES['avatar']['tmp_name'], '../' . $path)) {
             $_SESSION['message'] = 'Ошибка при загрузке сообщения';
-            header('Location: ../reg.php');
+            header('Location: ../register.php');
         }
 
         $password = md5($password);
 
-        mysqli_query($connect, "INSERT INTO `users` (`id_student`, `nameSurname`, `login`, `email`, `password`, `avatar`) VALUES (NULL, '$nameSurname', '$login', '$email', '$password', '$path')");
+        mysqli_query($connect, "INSERT INTO `users` (`id`, `full_name`, `login`, `email`, `password`, `avatar`) VALUES (NULL, '$full_name', '$login', '$email', '$password', '$path')");
 
         $_SESSION['message'] = 'Регистрация прошла успешно!';
-        header('Location: ../login.php');
+        header('Location: ../index.php');
 
 
     } else {
         $_SESSION['message'] = 'Пароли не совпадают';
-        header('Location: ../reg.php');
+        header('Location: ../register.php');
     }
 
 ?>

@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+
+// if ($_session['user']) {
+    // header('location: profile.php');
+// }
+
+?>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,12 +67,12 @@
 											</div>
 
 
-										 <?php
-											if ($_SESSION['message']) {
-												echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-											}
-											unset($_SESSION['message']);
-										?>
+											 <?php
+												if (isset ($_SESSION['message'])) {
+													echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+												}
+												unset($_SESSION['message']);
+											?>
 								</form>		
 							</div>
 			</div>

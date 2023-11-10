@@ -1,8 +1,5 @@
 ﻿<?php
     session_start();
-    if ($_SESSION['user']) {
-        header('Location: profile.php');
-    }
 ?>
 
 <!doctype html>
@@ -433,11 +430,11 @@
                         value="Создать аккаунт" />
 					</div>
 					<?php
-						if ($_SESSION['message']) {
-							echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-						}
-						unset($_SESSION['message']);
-					?>
+            if (isset ($_SESSION['message'])) {
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+            }
+            unset($_SESSION['message']);
+        ?>
             </form>
                </div>
           </text-suggester>
