@@ -11,22 +11,40 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация и регистрация</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles/loginstyle.css">
 </head>
-<body>
+<body class="session-authentication">
+<!-- Логотип -->
 
-<!-- Форма авторизации -->
+<div class="header-wrapper">
+		<div class="header-logged pt-5 pb-4">
+			<div class="cointainer-center">
+			<a class="header-logo" href="index.html">
+			<img class="logotype" src="img/logo.svg">
+			</a>
+			</div>
+		</div>
+	</div>
 
+
+<div class="auth-form px-3">
+<div class="auth-form-header p-0">
+<h1>Войти в МоюАкадемию</h1>
+</div>
+<div class="auth-form-body mt-3">
+    <!-- Форма авторизации -->
     <form action="vendor/signin.php" method="post">
-        <label>Логин</label>
-        <input type="text" name="login" placeholder="Введите свой логин">
-        <label>Пароль</label>
-        <input type="password" name="password" placeholder="Введите пароль">
-        <button type="submit">Войти</button>
+        <label class="login-label">Логин</label>
+        <input type="text" name="login" class="form-control input-block">
+        <label class="password-label">Пароль</label>
+        <input type="password" name="password" class="form-control form-control input-block js-password-field">
+        <button type="submit" class="btn btn-primary btn-block js-sign-in-button">Войти</button>
+		<div class="login-callout mt-3">
         <p>
             У вас нет аккаунта? - <a href="register.php">зарегистрируйтесь</a>!
         </p>
+		</div>
         <?php
             if (isset ($_SESSION['message'])) {
                 echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
@@ -34,6 +52,7 @@ session_start();
             unset($_SESSION['message']);
         ?>
     </form>
-
+</div>
+</div>
 </body>
 </html>

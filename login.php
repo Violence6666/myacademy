@@ -47,9 +47,9 @@ session_start();
 										    <td> <input type="text" name="l_password" class="form-control form-control input-block js-password-field" required=" " /> </td>
 										   </tr>
 
-										   <tr>
-										    <td colspan="2"> <input type="submit" name="l_send" value="Войти" class="btn btn-primary btn-block js-sign-in-button"> </td>
-										   </tr>
+										<tr>
+										<td colspan="2"> <input type="submit" name="l_send" value="Войти" class="btn btn-primary btn-block js-sign-in-button"> </td>
+										</tr>
 
 
 											<div class="login-callout mt-3">

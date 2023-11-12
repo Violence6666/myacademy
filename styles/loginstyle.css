@@ -143,10 +143,16 @@ label{
   border-radius: 6px;
   -webkit-appearance: none;
   appearance: none;
+  margin-top: 15px;
 }
 
 .login-label{
-	margin-top:-15px;
+	margin-bottom: 5px;
+}
+
+.password-label{
+	margin-top:12px;
+	margin-bottom: 5px;
 }
 
 .form-control:-webkit-autofill {
@@ -176,7 +182,7 @@ td{
 }
 
 .login-callout {
-  padding: 16px 16px;
+  padding: 5px 5px;
   text-align: center;
   border: 1px solid #30363d;
   border-radius: 6px;
