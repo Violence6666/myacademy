@@ -20,10 +20,10 @@
                         <tr>
                             <th scope="col">№</th>
                             <th scope="col">Имя и фамилия</th>
-                            <th scope="col">Логин</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Пароль</th>
                             <th scope="col">Роль</th>
+                            <th scope="col">Логин</th>
+                            <th scope="col">Пароль</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>

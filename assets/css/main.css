@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -77,84 +76,4 @@ button {
 
 .full-name-profile{
 	margin: 10px 0;
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Montserrat, sans-serif;
-}
-
-a {
-    color: #7c9ab7;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-p {
-    margin: 10px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
-
-input {
-    margin: 10px 0;
-    padding: 10px;
-    border: unset;
-    border-bottom: 2px solid #e3e3e3;
-    outline: none;
-}
-
-button {
-    padding: 10px;
-    background: #e3e3e3;
-    border: unset;
-    cursor: pointer;
-}
-
-.msg {
-    border: 2px solid #ffa908;
-    border-radius: 3px;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.logout {
-    color: #cf4036;
-}
-
-
-.profile-main{
-	justify-content:center;
-	text-align:center;
-	display: flex;
-	position:absolute;
-	top: 0;
-    right: 0;
-}
-
-.logo-profile{
-    margin-top: 10px;
-    margin-right: 150px;
-	right:0;
-    display: flex;
-	justify-content:end;
-}
-
-
-.full-name-profile{
-	margin: 10px 0;
->>>>>>> 1738817b5f902f0a16e063f9ca939032d68dc6e2
 }
