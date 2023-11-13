@@ -42,17 +42,19 @@ session_start();
         <button type="submit" class="btn btn-primary btn-block js-sign-in-button">Войти</button>
 		<div class="login-callout mt-3">
         <p>
-            У вас нет аккаунта? - <a href="register.php">зарегистрируйтесь</a>!
+            У вас нет аккаунта? - <a href="register.php">Зарегистрируйтесь</a>!
         </p>
 		</div>
-        <?php
+        
+    </form>
+    
+</div>
+<?php
             if (isset ($_SESSION['message'])) {
                 echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
             }
             unset($_SESSION['message']);
         ?>
-    </form>
-</div>
 </div>
 </body>
 </html>

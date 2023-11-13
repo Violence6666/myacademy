@@ -4,18 +4,12 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles/StyleMain.css">
-   <link rel="stylesheet" href="styles/styleBROWS.css">
-   <link rel="stylesheet" href="styles/styleFOOTER.css">
-   <link rel="stylesheet" href="styles/styleIndex.css">
-   <link rel="stylesheet" href="styles/stylePage.css">
-   <link rel="stylesheet" href="styles/stylePageFooter.css">
   </head>
   <body>
-    <header>
+<header>
     <div class="NewContainer__inner">
-        <div class="NewHeader__container">
             <div class="LogoDropdown" href="mainPage.php">
-            <a class="Logo Logo--light">
+            <a class="Logo Logo-light">
                 <div class="Logo__inner Logo__inner--small sm-1">
                 <img src="./img/logo.svg">
                 </div>
@@ -54,8 +48,7 @@
 			</ul>
 			</nav>
 			</div>
-        </div>
     </div>
-    </header>
+</header>
   </body>
 </html>
