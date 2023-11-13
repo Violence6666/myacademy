@@ -52,5 +52,28 @@ button {
 }
 
 .logout {
-    color: #b7625c;
+    color: #cf4036;
+}
+
+
+.profile-main{
+	justify-content:center;
+	text-align:center;
+	display: flex;
+	position:absolute;
+	top: 0;
+    right: 0;
+}
+
+.logo-profile{
+    margin-top: 10px;
+    margin-right: 150px;
+	right:0;
+    display: flex;
+	justify-content:end;
+}
+
+
+.full-name-profile{
+	margin: 10px 0;
 }

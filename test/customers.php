@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <title>Админ панель</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
-
 <body>
     <div class="container mt-2">
         <div class="page-header">
@@ -44,6 +42,7 @@
                                 <td><?php echo $array[3]; ?></td>
                                 <td><?php echo $array[4]; ?></td>
                                 <td><?php echo $array[5]; ?></td>
+                                <td><?php echo $array[6]; ?></td>
                                 <td>
                                     <a href="javascript:void(0)" class="btn btn-primary view" data-id="<?php echo $array[0]; ?>">Удалить</a>
                         </tr>
