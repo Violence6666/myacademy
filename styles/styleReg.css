@@ -1,3 +1,37 @@
+.z-2 {
+  z-index: 2 !important;
+}
+
+.f4 {
+  font-size: var(--h4-size, 16px) !important;
+}
+
+.py-3 {
+  padding-top: var(--base-size-16, 16px) !important;
+  padding-bottom: var(--base-size-16, 16px) !important;
+}
+
+
+.textInput{
+  min-width: 500px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color:white;
+}
+
+
+li {
+list-style-type: none;
+}
+
+
+
+
+
+
+
+
 element.style {
   word-wrap: break-word;
 }
@@ -21,11 +55,13 @@ body {
   font-size: var(--body-font-size, 16px);
   line-height: 1.5;
   color: var(--fgColor-default, var(--color-fg-default));
-  background-color: var(--bgColor-default, var(--color-canvas-default));
+
 }
 
-body {
+body,html {
   margin: 0;
+  height:100%;
+  width:100%;
 }
 .typing-effect-cursor {
   color: #fff;
@@ -103,8 +139,8 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   fill: currentColor;
 }
 .p-responsive {
-  padding-right: 40px !important;
-  padding-left: 40px !important;
+  padding-right: 16px !important;
+  padding-left: 16x !important;
 }
 .flex-items-center {
   align-items: center !important;
@@ -261,10 +297,6 @@ img {
   overflow: clip;
 }
 
-.signup-stars {
-  background-color: rgb(15, 0, 49);
-}
-
 .z-1 {
   z-index: 1 !important;
 }
@@ -314,12 +346,6 @@ auto-complete, details-dialog, details-menu, file-attachment, filter-input, remo
   opacity: 0;
   align-content: center;
   justify-content: center;
-}
-
-
-.signup-input {
-  background-color: #0c162d;
-  -webkit-text-fill-color: #fff;
 }
 .color-text-white {
   color: white !important;

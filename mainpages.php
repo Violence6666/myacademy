@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleReg.css" />
     <head>
-      <style type="text/css">.turbo-progress-bar {
-      position: fixed;
-      display: block;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: #0076ff;
-      z-index: 2147483647;
-      transition:
-        width 300ms ease-out,
-        opacity 150ms 150ms ease-in;
-      transform: translate3d(0, 0, 0);
-    }
-    </style>
         <meta charset="utf-8">
-      <link rel="dns-prefetch" href="https://github.githubassets.com">
-      <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
-      <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-      <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-      <link rel="preconnect" href="https://github.githubassets.com" crossorigin="">
-      <link rel="preconnect" href="https://avatars.githubusercontent.com">
     
       
     
@@ -79,7 +58,7 @@
       <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/signup-9197d41c14b1.js"></script>
     
     
-      <title>Главная</title>
+      <title>Регистрация</title>
     
     
     
@@ -145,7 +124,17 @@
           <meta property="og:image:width" content="1200">
           <meta property="og:image:height" content="620">
     
- 
+          <meta property="twitter:site" content="github">
+          <meta property="twitter:site:id" content="13334762">
+          <meta property="twitter:creator" content="github">
+          <meta property="twitter:creator:id" content="13334762">
+          <meta property="twitter:card" content="summary_large_image">
+          <meta property="twitter:title" content="GitHub">
+          <meta property="twitter:description" content="GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 330 million projects.">
+          <meta property="twitter:image:src" content="img/logo.svg">
+          <meta property="twitter:image:width" content="1200">
+          <meta property="twitter:image:height" content="1200">
+    
     
     
             <meta name="hostname" content="github.com">
@@ -162,7 +151,7 @@
     
       <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
     
-      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/site-c4886149a816.css">
+          <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/site-c4886149a816.css">
       <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/home-9441872b9454.css">
     
     
@@ -189,84 +178,58 @@
       </head>
   </head>
         <!-- <p class="p">Оставайтесь в курсе событий мира компьютерных сетей</p> -->
-  <body>
-        <header>
-          <div class="container-xl d-lg-flex flex-items-center p-responsive pd-1">
-            <div class="d-md-flex flex-justify-between flex-items-center width-full">
-              <a href="index.html" aria-label="Homepage">
-                <img class="logotype octicon octicon-mark-github color-fg-on-emphasis" src="img/logo.svg"/>
-              </a>
-                    <div class="font-mktg mt-3 mt-md-0">
-                      <a href="login.html" class="butLog btn-1">Вход</a>
-                      <a href="reg.html" class="butReg btn-1">Регистрация</a>
-                    </div>
-              </div>
-          </div>
-        </header>
-        <main>
-        <section class="start-content">
-          <div class="overlap-cover">
-          <p>Моя Академия</p>
-          <p>Это курсы по компьютерным сетям нового поколения</p>
-          <p>Найдите свой путь к работе мечты!</p>
-          </div>
-        </section>
-        <section class="start-learn">
-          <div class="overlap-learn">
+  <body class="logged-out env-production page-responsive height-full d-flex flex-column header-overlay intent-mouse" style="word-wrap: break-word;">
+        <div data-turbo-body class="logged-out env-production page-responsive height-full d-flex flex-column header-overlay" style="word-wrap: break-word;">
+            <div class="position-relative js-header-wrapper ">
+                    <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
+                        <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
+                    </span>      
             
-                  <button class="button">
-
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                    </svg>
-
-                    
-                    <div class="text">
-                      Начать обучение
-                    </div>
-
-                  </button>
-          </div>
-        </section>
-
-        <section class="about-learn">
-          <div class="portfolio">
-            <div class="container">
-              <main class="gallery">
       
-                <div data-speed=".9" class="gallery__left">
-        
-                  <img class="gallery__item" src="img/image-10.png" alt="Alt">
-           
-        
-                  <div class="text-block gallery__item">
-                    <p class="text-block__p">Курсы нового поколения</p>
-                  </div>
-        
-                  <img class="gallery__item" src="img/image-8.png" alt="Alt">
+      
+            
+      
+                  <header class="js-warp-hide header-logged-out f4 py-3 z-2" role="banner">
+                      <div class="container-xl d-lg-flex flex-items-center p-responsive">
+                        <div class="d-md-flex flex-justify-between flex-items-center width-full">
+                          <a href="index.html" aria-label="Homepage">
+                            <img class="logotype octicon octicon-mark-github color-fg-on-emphasis" src="img/logo.svg"/>
+                          </a>
+                        </div>
+						<ul class="NavbarList">
+									<li class="NavbarItemEl">
+									<button class="Button Button--m-secondary-text-overlay Button--s-light Button--size-default NavbarItemTitle Button--round">
+									<span class="Button__inner">
+									<span class="ButtonText ButtonText--l-2 ButtonText--t-default semi">
+									Темы
+									</span>
+									</span>
+									</button>
+									</li>
+									<li class="NavbarItemEl">
+									<button class="Button Button--m-secondary-text-overlay Button--s-light Button--size-default NavbarItemTitle Button--round">
+									<span class="Button__inner">
+									<span class="ButtonText ButtonText--l-2 ButtonText--t-default semi">
+									Возможности
+									</span>
+									</span>
+									</button>
+									</li>
+									<li class="NavbarItemEl">
+									<button class="Button Button--m-secondary-text-overlay Button--s-light Button--size-default NavbarItemTitle Button--round">
+									<span class="Button__inner">
+									<span class="ButtonText ButtonText--l-2 ButtonText--t-default semi">
+									О нас
+									</span>
+									</span>
+									</button>
+									</li>
+						</ul>
+                      </div>
+					  
+                    </header>
                 </div>
-    
-                <div data-speed="1.1" class="gallery__right">
-        
-                  <div class="text-block gallery__item">
-                    <p class="text-block__p">Погрузись в мир компьютерных сетей с головой</p>
-                  </div>
-        
-                  <img class="gallery__item" src="img/image-9.png" alt="Alt">
-                  <div class="text-block gallery__item">
-                    <p class="text-block__p">С вами всегда ваш учитель который поможет вам</p>
-                  </div>
-                </div>
-    
-              </main>
-            </div>
-          </div>
-        </section>
 
-        </main>
-        <footer>
 
-        </footer>
   </body>
 </html>
