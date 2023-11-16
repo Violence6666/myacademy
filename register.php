@@ -31,7 +31,7 @@
         <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
         <button type="submit">Регистрация</button>
         <p>
-            У вас уже есть аккаунт? - <a href="index.php">авторизируйтесь</a>!
+            У вас уже есть аккаунт? - <a href="login.php">авторизируйтесь</a>!
         </p>
         <?php
             if (isset ($_SESSION['message'])) {
