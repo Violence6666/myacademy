@@ -1,0 +1,46 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.head-text{
+	text-align:center;
+	margin-top: 100px;
+}
+table{
+	table-layout: fixed;
+	margin-bottom: 20px;
+	width: 1200px;
+    /* центрируем таблицу */
+    margin: auto;
+    /* выравнивание текста внутри ячеек */
+    text-align: center;
+    /* делаем границы красивыми */
+    border-collapse: collapse;
+}
+table th {
+	color:grey;
+	padding: 5px;
+}
+table td{
+	padding: 5px 10px;
+	text-align: center;
+	font-weight: bold;
+}
+a{
+	text-decoration: none;
+}
+.deleteButton{
+	border-radius: 36px;
+}
+table.view tbody tr:nth-child(odd){
+	background: #fff;
+}
+
+
+table.edit{
+	border: 1px solid #eee;
+	background: #ccc;
+}
+table.edit td{
+	border: 1px solid #ccc;
+
+}
